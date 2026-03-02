@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Ciudad Geométrica</title>
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <title>Visualizador de Arte Geométrico</title>
+    <link rel="icon" href="assets/img/icono.png" type="image/png">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-light">
 
-    <nav class="navbar navbar-dark bg-dark shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <span class="navbar-brand mb-0 h1">🎨 Replicador de Arte Geométrico</span>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/img/icono.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                Canvas Artist
+            </a>
         </div>
     </nav>
 
-    <main class="container my-5 flex-grow-1">
-        <div class="row align-items-center g-4">
-            <div class="col-md-6 text-center">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">Imagen Programada (Canvas)</div>
-                    <div class="card-body p-2 bg-light">
-                        <canvas id="cityCanvas" width="1000" height="500" class="img-fluid border"></canvas>
+    <main class="container my-auto py-5">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h5 class="mb-0">Resultado (Canvas JS)</h5>
+                    </div>
+                    <div class="card-body p-2">
+                        <canvas id="cityCanvas" width="800" height="500" class="img-fluid rounded w-100"></canvas>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-6 text-center">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-secondary text-white">Imagen Original</div>
-                    <div class="card-body p-2 bg-light">
-                        <img src="assets/img/imagen.jpg" alt="Original" class="img-fluid border">
+
+            <div class="col-lg-6">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-secondary text-white text-center py-3">
+                        <h5 class="mb-0">Imagen Original</h5>
+                    </div>
+                    <div class="card-body p-2">
+                        <img src="assets/img/imagen.jpg" alt="Referencia Original" class="img-fluid rounded w-100">
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p class="mb-0">Desarrollado por: Ing. en Sistemas Computacionales</p>
-            <small>Pachuca, Hidalgo - 2026</small>
+    <footer class="bg-dark text-white mt-auto py-4">
+        <div class="container text-center">
+            <p class="mb-1">Desarrollado por: Ing. en Sistemas Computacionales</p>
+            <p class="small text-secondary mb-0">Tulancingo de Bravo, Hidalgo | 2026</p>
         </div>
     </footer>
 
