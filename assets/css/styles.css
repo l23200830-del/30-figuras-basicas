@@ -1,29 +1,65 @@
+:root {
+    --text-main: #1d1d1f;
+    --accent: #0071e3;
+}
+
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
 }
 
-.card {
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+/* Efecto Vidrio Navbar */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: all 0.4s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* Tipografía Hero que se estira */
+.hero-title, .footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12vw;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    transform-origin: center;
+    /* Efecto de estiramiento inicial */
+    will-change: transform, letter-spacing;
 }
 
-canvas {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    background-color: #fff;
+.letter-spacing-lg {
+    letter-spacing: 0.5rem;
+    font-size: 0.8rem;
 }
 
-img {
-    border-radius: 4px;
+/* Tarjetas Apple Modernas */
+.apple-card {
+    position: relative;
+    background: #fbfbfd;
+    border-radius: 30px;
+    padding: 2rem;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.navbar {
-    border-bottom: 3px solid #00AEEF;
+.apple-card:hover {
+    transform: scale(1.03) translateY(-10px);
 }
+
+.card-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #86868b;
+    display: block;
+    margin-bottom: 20px;
+}
+
+canvas, img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.extra-small { font-size: 10px; }

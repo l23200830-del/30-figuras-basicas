@@ -3,56 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador Geométrico | Proyecto Canvas</title>
-    <link rel="shortcut icon" href="assets/img/icono.png" type="image/png">
+    <title>Geometric Studio | Engineering & Design</title>
+    <link rel="icon" href="assets/img/icono.png" type="image/png">
     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="bg-white">
 
-    <nav class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
+    <nav class="navbar navbar-light fixed-top glass-nav py-3">
+        <div class="container border-bottom pb-2">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="assets/img/icono.png" alt="Logo" width="30" height="30" class="me-2">
-                Programación Gráfica
+                <img src="assets/img/icono.png" alt="Logo" width="24" class="me-2">
+                <span class="fw-bold tracking-tight">CANVAS.STUDIO</span>
             </a>
+            <div class="d-none d-md-block">
+                <span class="badge rounded-pill bg-dark px-3 fw-light">ISC 2026</span>
+            </div>
         </div>
     </nav>
 
-    <main class="container my-auto py-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card shadow-sm border-0">
-                    <div class="card-header bg-primary text-white text-center">
-                        Dibujo por Programación
-                    </div>
-                    <div class="card-body p-2 bg-white">
-                        <canvas id="cityCanvas" width="1000" height="500" class="img-fluid border"></canvas>
-                    </div>
+    <header class="vh-100 d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <h1 class="hero-title text-uppercase mb-0" id="animate-text">Geometría</h1>
+            <p class="text-muted mt-3 letter-spacing-lg fw-light overflow-hidden">
+                <span data-aos="fade-up" data-aos-delay="300" class="d-inline-block">REPLICACIÓN DIGITAL POR CÓDIGO</span>
+            </p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
+                <div class="apple-card">
+                    <span class="card-tag">Neural Render</span>
+                    <canvas id="cityCanvas" width="1000" height="500" class="img-fluid"></canvas>
                 </div>
             </div>
-            
-            <div class="col-md-6">
-                <div class="card shadow-sm border-0">
-                    <div class="card-header bg-secondary text-white text-center">
-                        Imagen Original (original.png)
-                    </div>
-                    <div class="card-body p-2 bg-white">
-                        <img src="assets/img/original.png" alt="Original" class="img-fluid border w-100">
-                    </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
+                <div class="apple-card">
+                    <span class="card-tag text-primary">Master Reference</span>
+                    <img src="assets/img/original.png" alt="Original" class="img-fluid">
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0">Desarrollado por: Ing. en Sistemas Computacionales</p>
-            <small class="text-muted">Tulancingo de Bravo, Hidalgo - 2026</small>
+    <footer class="py-5 border-top bg-white">
+        <div class="container text-center">
+            <h2 class="footer-title mb-4">INGENIERÍA</h2>
+            <p class="text-secondary small mb-1">Tulancingo de Bravo, Hidalgo</p>
+            <p class="text-muted extra-small">© 2026 Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
